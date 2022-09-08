@@ -6,6 +6,7 @@ $('document').ready(function () {
   $.ajax({
     url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTxwoRqY6UYD1L1ak4F13ipi3vD20Nhn6FwJX5wXgfNgTPb5f356Fu1Nm_fb38CuZEBm6xVlUNFn02K/pub?gid=0&single=true&output=csv',
     dataType: 'text',
+    cache: false,
     success: function (data) {
       var employee_data = data.split(/\r?\n|\r/);
       var table_data = '<table class="table table-bordered table-striped">';
