@@ -8,6 +8,8 @@ $('document').ready(function () {
     dataType: 'text',
     cache: false,
     success: function (data) {
+      console.log(data);
+
       var employee_data = data.split(/\r?\n|\r/);
       var table_data = '<table class="table table-bordered table-striped">';
       for (var count = 0; count < employee_data.length; count++) {
