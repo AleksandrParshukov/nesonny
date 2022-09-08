@@ -1,11 +1,27 @@
+$.support.cors = true;
+
 $('document').ready(function () {
+  console.log('ready');
+
+   $.ajax({
+     type: 'POST',
+     dataType: 'json',
+     crossDomain: true,
+     url: 'https://tools.aimylogic.com/api/googlesheet2json?sheet=%D0%9B%D0%B8%D1%81%D1%821&id=1kuBxfy3M7hPfpCtm7B7ZMnLPPCn4yK93z3E1m--X1KU',
+     cache: false,
+     success: function (data) {
+       console.log(data);
+     },
+   });
   $.getJSON(
-    'Access-Control-Allow-Origin:https://tools.aimylogic.com/api/googlesheet2json?sheet=%D0%9B%D0%B8%D1%81%D1%821&id=1kuBxfy3M7hPfpCtm7B7ZMnLPPCn4yK93z3E1m--X1KU',
+    'https://tools.aimylogic.com/api/googlesheet2json?sheet=%D0%9B%D0%B8%D1%81%D1%821&id=1kuBxfy3M7hPfpCtm7B7ZMnLPPCn4yK93z3E1m--X1KU',
     function (data) {
       var items = [];
       $.each(data, function (key, val) {
         items.push("<li id='" + key + "'>" + val + '</li>');
       });
+
+      console.log(data);
 
       $('<ul/>', {
         class: 'my-new-list',

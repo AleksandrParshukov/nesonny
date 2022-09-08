@@ -2,20 +2,29 @@ $.support.cors = true;
 
 $('document').ready(function () {
   console.log('ready');
-  $.getJSON(
-    'https://tools.aimylogic.com/api/googlesheet2json?sheet=%D0%9B%D0%B8%D1%81%D1%821&id=1kuBxfy3M7hPfpCtm7B7ZMnLPPCn4yK93z3E1m--X1KU',
-    function (data) {
-      var items = [];
-      $.each(data, function (key, val) {
-        items.push("<li id='" + key + "'>" + val + '</li>');
-      });
 
-      console.log(data);
+  $.ajax({
+    url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTxwoRqY6UYD1L1ak4F13ipi3vD20Nhn6FwJX5wXgfNgTPb5f356Fu1Nm_fb38CuZEBm6xVlUNFn02K/pub?gid=0&single=true&output=csv',
+    dataType: 'text',
+    success: function (data) {
+      var employee_data = data.split(/\r?\n|\r/);
+      var table_data = '<table class="table table-bordered table-striped">';
+      for (var count = 0; count < employee_data.length; count++) {
+        var cell_data = employee_data[count].split(',');
+        table_data += '<tr>';
+        for (var cell_count = 0; cell_count < cell_data.length; cell_count++) {
+          if (count === 0) {
+            table_data += '<th>' + cell_data[cell_count] + '</th>';
+          } else {
+            table_data += '<td>' + cell_data[cell_count] + '</td>';
+          }
+        }
+        table_data += '</tr>';
+      }
+      table_data += '</table>';
+      $('body').html(table_data);
+    },
+  });
 
-      $('<ul/>', {
-        class: 'my-new-list',
-        html: items.join(''),
-      }).appendTo('body');
-    }
-  );
+
 });
