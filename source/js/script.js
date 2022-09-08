@@ -1,3 +1,5 @@
+$.support.cors = true;
+
 $('document').ready(function () {
   console.log('ready');
   $.getJSON(
