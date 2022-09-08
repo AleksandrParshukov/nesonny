@@ -1,0 +1,256 @@
+.partnership {
+  max-width: 1028px;
+  margin: 0 auto;
+
+  &__title {
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 59px;
+    letter-spacing: 0.02em;
+    color: @white;
+    position: absolute;
+    bottom: 140px;
+    left: 17px;
+    z-index: 1;
+  }
+
+  &__caption--top {
+    margin-bottom: 5px;
+  }
+
+  &__row {
+    position: relative;
+    margin: 0 0 90px;
+
+    p {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.01em;
+    }
+
+    >p {
+      margin-top: 25px;
+    }
+  }
+
+  &__logos {
+    width: 661px;
+    height: 611px;
+    position: absolute;
+    top: 33px;
+    left: 550px;
+
+    >img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__hands {
+    position: absolute;
+    top: 84px;
+    right: -46px;
+  }
+
+  &__tile {
+    width: 100%;
+    margin-top: 108px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__tile_item {
+    position: relative;
+
+    &:nth-child(2) {
+      margin: -20px 0 47px 50%;
+    }
+
+    &:nth-child(4) {
+      margin: 0 0 0 50%;
+    }
+  }
+
+  &__tile_num {
+    font-weight: bold;
+    font-size: 300px;
+    line-height: 366px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    color: @orange;
+    opacity: 0.31;
+    position: absolute;
+
+    &:nth-child(1) {
+      top: -159px;
+      left: -55px;
+    }
+
+    &:nth-child(2) {
+      top: -144px;
+      left: -63px;
+    }
+
+    &:nth-child(3) {
+      top: -182px;
+      left: -55px;
+    }
+
+    &:nth-child(4) {
+      top: -179px;
+      left: -3px;
+    }
+  }
+
+  &__contacts {
+    padding: 55px 0;
+    margin: 110px -100% 0;
+    box-shadow: 0 -6px 26px -16px rgba(0,0,0,.08);
+
+    >p:first-child {
+      font-size: 40px;
+      line-height: 49px;
+      letter-spacing: 0.02em;
+      color: #00A64C;
+      width: max-content;
+      margin: 0 108px 0 auto;
+    }
+
+    >p:last-child {
+      width: max-content;
+      margin: 0 auto 0 0;
+
+      >a {
+        font-size: 40px;
+        line-height: 49px;
+        color: @orange;
+      }
+      
+      >a:last-child {
+        letter-spacing: 0.04em;
+      }
+
+
+    }
+  }
+
+  &__reviews {
+    margin: 35px 0 55px;
+  }
+}
+
+@media (max-width: 576px) {
+  .partnership {
+    max-width: 1028px;
+    margin: 0 auto;
+
+    .banner {
+      padding-left: -10px;
+    }
+
+    &__title {
+      font-size: 30px;
+      line-height: 37px;
+      margin-bottom: 0;
+      bottom: 45px;
+      left: 0.75rem;
+    }
+    &__caption {
+
+      &--top {
+        width: 360px;
+        max-width: none;
+        margin: 0 auto -8px;
+      }
+    }
+
+    &__row {
+      position: relative;
+      margin: 0;
+
+      p {
+        font-size: 16px;
+        line-height: 20px;
+        padding: 0 23px;
+      }
+
+      >p {
+        margin-top: 28px;
+      }
+    }
+
+    &__logos {
+      width: 471px;
+      height: 387px;
+      max-width: none;
+      margin: 0 0 0 50%;
+      position: static;
+      flex-shrink: 0;
+      transform: translateX(-50%);
+    }
+
+    &__hands {
+      width: 114px;
+      height: 81px;
+      position: static;
+      margin: 9px 0 0 auto;
+    }
+
+    &__tile {
+      width: 100%;
+      padding-left: 32px;
+      margin-top: 30px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__tile_item {
+      &:nth-child(2) {
+        margin: 120px 0;
+      }
+
+      &:nth-child(4) {
+        margin: 120px 0 81px;
+      }
+
+      p {
+        padding-left: 0;
+      }
+    }
+
+    &__contacts {
+      padding: 40px 0 55px;
+      margin: 0;
+      flex-direction: column;
+      align-items: center;
+
+      >p:first-child {
+        font-size: 26px;
+        line-height: 32px;
+        text-align: center;
+        width: 312px;
+        margin: 0 0 20px;
+      }
+
+      >p:last-child {
+        margin: 0;
+
+        >a {
+          font-size: 26px;
+          line-height: 32px;
+        }
+      }
+    }
+
+    &__reviews {
+      margin: 10px 0 55px;
+      
+      .reviews__list {
+        .swiper-wrapper {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.footer {
+  &__nav {
+    padding: 45px 0 35px;
+    background-color: #818A81;
+  }
+
+  &__row {
+    width: min-content;
+    margin: 0 auto;
+  }
+
+  +p {
+    display: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .footer {
+    &__nav {
+      padding: 33px 0 48px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    margin-bottom: 80px;
+
+    &__nav {
+      padding: 50px 0 16px 10px;
+    }
+  
+    &__row {
+      width: 100%;
+      margin: 0;
+      flex-direction: column;
+    }
+  }
+}

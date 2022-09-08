@@ -1,0 +1,194 @@
+.compare {
+  .licenses__row > div:only-child {
+    width: 100%;
+  }
+
+  .licenses__row:last-child {
+    margin-bottom: 55px;
+  }
+
+  &__control {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+
+  .compare_list_table {
+    margin-bottom: 55px;
+  }
+
+  .compare-list-table-header {
+    padding: 0;
+    border: 0;
+    display: flex;
+  }
+
+  .compare-list-table-header .compare-list-table-cell {
+    font-weight: 500;
+    width: 262px;
+    padding: 0;
+    border: 0.5px solid #CECECE;
+    border-left: none;
+    border-radius: 0;
+    flex-shrink: 0;
+
+    &:first-child {
+      border-top: none;
+      padding: 0 0 21px;
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      justify-content: end;
+    }
+
+    .card {
+      height: 100%;
+
+      .card__price {
+        margin-block: 5px 10px;
+      }
+    }
+  }
+
+  .compare-list-table-property {
+    padding: 0;
+    border: 0;
+    display: flex;
+  }
+
+  .compare-list-table-property .compare-list-table-cell {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: @black;
+    width: 262px;
+    min-height: 88px;  
+    padding: 15px 20px;
+    border-bottom: 0.5px solid #CECECE;
+    border-right: 0.5px solid #CECECE;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+
+    &:first-child {
+      font-weight: 500;
+      padding: 0;
+      justify-content: flex-start;
+      border-left: none;
+    }
+  }
+
+  .compare-list-sections {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .compare-list-sections .compare-list-sections-link,
+  .compare-list-displaymode .compare-list-displaymode-link {
+    text-decoration: none;
+    background: none;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .compare-list-sections .compare-list-sections-link.compare-list-sections-link-selected,
+  .compare-list-displaymode .compare-list-displaymode-link-selected {
+    text-decoration: none;
+    color: @orange;
+  }
+
+  .compare-list-displaymode-title {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: @black;
+    margin-bottom: 6px;
+  }
+
+  .compare-list-clear-link.compare-list-button,
+  .compare-list-item-del-link.compare-list-button {
+    color: @orange;
+    width: max-content;
+    padding: 5px;
+    background: none;
+    border: 1px solid @orange;
+    box-sizing: border-box;
+    border-radius: 20px;
+    display: block;
+  }
+}
+
+@media (max-width: 576px) {
+  .compare {
+    .compare-list-table-header {
+      display: grid;
+      grid-template-rows: min-content min-content;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .compare-list-table-header .compare-list-table-cell {
+      width: 187px;
+  
+      &:first-child {
+        grid-column-start: 1;
+        grid-column-end: -1;
+      }
+
+      .card {
+        .card__price {
+          margin-block: 4px 7px;
+        }
+      }
+    }
+  
+    .compare-list-table-property {
+      display: grid;
+      grid-template-rows: min-content min-content;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  
+    .compare-list-table-property .compare-list-table-cell {
+      font-size: 14px;
+      line-height: 17px;
+      width: 187px;
+      min-height: 70px;
+  
+      &:first-child {
+        min-height: 0;
+        padding-block: 13px;
+        grid-column-start: 1;
+        grid-column-end: -1;
+      }
+    }
+  
+    .compare-list-sections {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    .compare-list-sections .compare-list-sections-link,
+    .compare-list-displaymode .compare-list-displaymode-link {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.01em;
+      margin-bottom: 7px;
+    }
+  
+    .compare-list-displaymode-title {
+      font-size: 12px;
+      line-height: 15px;
+      letter-spacing: 0.01em;
+      margin-bottom: 4px;
+    }
+  
+    .compare-list-clear-link.compare-list-button,
+    .compare-list-item-del-link.compare-list-button {
+      font-size: 10px;
+      line-height: 12px;
+      letter-spacing: 0.01em;
+      padding: 3px;
+    }
+  }
+}

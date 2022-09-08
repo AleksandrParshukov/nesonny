@@ -1,0 +1,131 @@
+.search {
+  width: 252px;
+  height: 30px;
+  position: relative; 
+
+  &__form {
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__submit {
+    width: 18px;
+    height: 18px;
+    background: transparent url("../img/magnifier.svg") no-repeat center;
+    background-size: contain;
+    border: none;
+    display: block;
+    position: absolute;
+    top: 4px;
+    right: 6.5px;
+  }
+
+  &__input {
+    color: rgba(6, 6, 6, 0.69);
+    width: 100%;
+    height: 100%;
+    padding: 0 0 0 10px;
+    background: @white;
+    border-radius: 18px;
+    border: none;
+    box-sizing: border-box;
+  }
+
+  &__result {
+    width: 515px;
+    padding: 25px 25px 40px;
+    background: @white;
+    border: 1px solid @orange;
+    box-sizing: border-box;
+    border-radius: 18px;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1200;
+  }
+
+  &__title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: @black;
+    margin: 0 0 15px 15px;
+  }
+
+  &__result_list {
+    width: 100%;
+  }
+
+  &__result_item {
+    padding: 15px;
+    border-bottom: 1px solid #EEEEEE;
+
+    &:first-child {
+      border-top: 1px solid #EEEEEE;
+    }
+
+    >a {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      color: rgba(74, 74, 74, 0.69);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .search {  
+    width: 100%;
+    height: auto;
+    padding: 40px 17px;
+    border-radius: 0 0 20px 20px;
+    background-color: white;
+    border: 1px solid @orange;
+    box-sizing: border-box;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+
+    &__form {
+      width: 100%;
+      height: 30px;
+    }
+  
+    &::after {
+      content: none;
+    }
+
+    &__result {
+      width: 100%;
+      padding: 10px 10px 25px;
+      margin-top: 45px;
+      position: static;
+      border: none;
+      border-radius: 0;
+      transform: translate(0, 0);
+    }
+  
+    &__title {
+      font-size: 14px;
+      line-height: 16px;
+      color: @black;
+      margin: 0 0 8px 8px;
+    }
+  
+    &__result_item {
+      padding: 8px;
+  
+      >a {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: rgba(74, 74, 74, 0.69);
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+.social {
+  &__button {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 23px;
+    letter-spacing: 0.02em;
+    color: @white;
+    text-align: center;
+    min-width: 174px;
+    padding: 8px 3px;
+    margin: 0 0 27px;
+    border: 1px solid @orange;
+    border-radius: 5px;
+    display: block;
+    transition: all 0.1s;
+
+    &:hover {
+      color: @orange;
+    }
+  }
+
+  &__item {
+    margin: 0 10px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  &__icon {
+    max-width: 34px;
+    max-height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    >i {
+      font-size: 28px;
+      color: @white;
+      transition: all 0.1s;
+    }
+
+    &:hover {
+      > i {
+      color: @orange;
+    }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .social {
+    &__button {
+      font-size: 11px;
+      line-height: 13px;
+      min-width: 139px;
+      padding: 7px 5px;
+      margin: 0 0 16px;
+    }
+  
+    &__item {
+      margin: 0 8px 0 0;
+  
+      &:last-child {
+        margin: 0;
+      }
+    }
+  
+    &__icon {
+      max-width: 27px;
+      max-height: 28px;
+  
+      &--inst {
+        width: 23px;
+        height: 24px;
+      }
+  
+      &--yt {
+        width: 22px;
+        height: 24px;
+      }
+  
+      &--fb {
+        width: 20px;
+        height: 20px;
+      }
+  
+      &--vk {
+        width: 27px;
+        height: 28px;
+      }
+  
+      &--ok {
+        width: 19px;
+        height: 19px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .social {
+    display: flex;
+    flex-direction: column;
+
+    &__button {
+      font-size: 10px;
+      line-height: 12px;
+      width: max-content;
+      min-width: none;
+      padding: 10px 8px;
+      margin: 17px 0 0;
+      border-radius: 18px;
+      order: 2;
+    }
+  
+    &__item {
+      margin: 0 15px 0 0;
+  
+      &:last-child {
+        margin: 0;
+      }
+    }
+  
+    &__icon {
+      max-width: 27px;
+      max-height: 28px;
+  
+      &--inst {
+        width: 23px;
+        height: 24px;
+      }
+  
+      &--yt {
+        width: 22px;
+        height: 24px;
+      }
+  
+      &--fb {
+        width: 20px;
+        height: 20px;
+      }
+  
+      &--vk {
+        width: 27px;
+        height: 28px;
+      }
+  
+      &--ok {
+        width: 19px;
+        height: 19px;
+      }
+    }
+  }
+}

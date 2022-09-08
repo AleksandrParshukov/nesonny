@@ -1,0 +1,258 @@
+.articles_tile {
+  max-width: 1028px;
+
+  &__title {
+    margin-top: 70px;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: min-content min-content;
+    gap: 40px 60px;
+    align-items: center;
+  }
+
+  &__item {
+    width: min-content;
+    height: min-content;
+    position: relative;
+
+    >img {
+      width: 100%;
+      height: 100%;
+    }
+
+    &:nth-child(1) {
+      width: 548px;
+      height: 364px;
+      align-self: flex-start;
+
+      .articles_tile__caption {
+        bottom: -45px; 
+        left: -41px;
+      }
+    }
+
+    &:nth-child(2) {
+      width: 420px;
+      height: 420px;
+
+      .articles_tile__caption {
+        bottom: -41px; 
+        right: -38px;
+      }
+    }
+
+    &:nth-child(3) {
+      width: 545px;
+      height: 410px;
+
+      .articles_tile__caption {
+        bottom: -44px; 
+        right: 6px;
+      }
+    }
+
+    &:nth-child(4) {
+      width: 376px;
+      height: 376px;
+
+      .articles_tile__caption {
+        bottom: -41px; 
+        right: -38px;
+      }
+    }
+  }
+
+  &__image {
+    filter: drop-shadow(5px 5px 30px rgba(83, 81, 79, 0.1));
+    border-radius: 8px;
+  }
+
+  &__caption {
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.01em;
+    color: @white;
+    width: max-content;
+    padding: 17px 15px;
+    background: @orange;
+    border-radius: 20px;
+    position: absolute;
+    transition: all 0.1s;
+
+    &:hover {
+      color: @white;
+      box-shadow: -5px 5px 20px rgba(255, 130, 25, 0.4);
+    }
+
+    &:active {
+      color: @white;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), #FF8219;
+      box-shadow: none;
+    }
+  }
+
+  &__link {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.01em;
+    color: @orange;
+    text-align: right;
+    width: max-content;
+    margin: 50px 0 0 auto;
+    position: relative;
+
+    .arrow-right(244px, @orange, -34px);
+
+    &::before,
+    &::after {
+      top: 100%;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .articles_tile {
+    max-width: 860px;
+
+    &__title {
+      margin-top: 60px;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: min-content min-content;
+      gap: 50px 30px;
+      align-items: center;
+    }
+  
+    &__item {  
+      &:nth-child(1) {
+        width: 458px;
+        height: 305px;
+  
+        .articles_tile__caption {
+          bottom: -24px; 
+          left: -35px;
+        }
+      }
+  
+      &:nth-child(2) {
+        width: 352px;
+        height: 351px;
+  
+        .articles_tile__caption {
+          bottom: -25px; 
+          right: -32px;
+        }
+      }
+  
+      &:nth-child(3) {
+        width: 464px;
+        height: 348px;
+  
+        .articles_tile__caption {
+          bottom: -38px; 
+          right: -17px;
+        }
+      }
+  
+      &:nth-child(4) {
+        width: 295px;
+        height: 293px;
+  
+        .articles_tile__caption {
+          bottom: -29px; 
+          right: -57px;
+        }
+      }
+    }
+  
+    &__caption {
+      font-size: 18px;
+      line-height: 22px;
+      padding: 8px 14px;
+      border-radius: 15px;
+      display: block;
+    }
+  
+    &__link {
+      font-size: 20px;
+      line-height: 24px;
+      margin: 22px 0 0 auto;
+  
+      .arrow-right(204px, @orange, -26px);
+  
+      &::before,
+      &::after {
+        top: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .articles_tile {
+
+    &__title {
+      width: min-content;
+      margin: 32px auto 0;
+    }
+  
+    &__list {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+  
+    &__item {  
+      margin-bottom: 42px;
+
+      &:nth-child(1) {
+        width: 309px;
+        height: 206px;
+        margin-left: auto;
+  
+        .articles_tile__caption {
+          bottom: -28px; 
+          left: -46px;
+        }
+      }
+  
+      &:nth-child(2) {
+        width: 319px;
+        height: 268px;
+        margin-right: auto;
+  
+        .articles_tile__caption {
+          bottom: -20px; 
+          right: -36px;
+        }
+      }
+  
+      &:nth-child(3) {
+        width: 307px;
+        height: 230px;
+        margin-left: auto;
+        margin-bottom: 0;
+  
+        .articles_tile__caption {
+          bottom: -23px; 
+          right: auto;
+          left: -48px;
+        }
+      }
+    }
+  
+    &__caption {
+      font-size: 14px;
+      line-height: 17px;
+      padding: 14px;
+      border-radius: 12px;
+    }
+  }
+}

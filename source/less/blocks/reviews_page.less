@@ -1,0 +1,242 @@
+.reviews_page {
+  .info__reviews_list {
+    width: auto;
+  }
+
+  .info__review_text {
+    max-width: 656px;
+  }
+
+  p:not(.info__reviews_item p) {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    color: @black;
+  }
+
+  h3 {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.02em;
+    color: @black;
+
+    &.info__review_text {
+      max-width: 100%;
+    }
+  }
+
+
+  .ask-grade.stars input[type="radio"] ~ label::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    display: block;
+    background: transparent url(../img/star-empty.svg) no-repeat center;
+    background-size: contain;
+  }
+
+  .ask-grade.stars input[type="radio"]:checked ~ label::before {
+    content: "";
+    background-image: url(../img/star.svg);
+  }
+
+  .ask-textarea-big {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.01em;
+    color: rgba(6, 6, 6, 0.28);
+    width: 100% !important;
+    max-width: 350px !important;
+    height: 150px !important;
+    padding: 10px 20px;
+    border: 1.5px solid @orange;
+    box-sizing: border-box;
+    border-radius: 20px;
+    resize: none;
+  }
+
+  &__label {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    position: relative;
+  }
+
+  &__input {
+    font-weight: normal;
+    font-size: 20px !important;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: @black;
+    width: 100% !important;
+    max-width: 350px !important;
+    height: auto !important;
+    max-height: 41px;
+    padding: 9px 0 9px 20px;
+    border: 1.5px solid @orange;
+    box-sizing: border-box;
+    border-radius: 20px;
+
+    &::placeholder {
+      color: rgba(6, 6, 6, 0.28);
+    }
+  }
+
+  .ask-captcha {
+    max-width: 350px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .ask-captcha-text {
+      width: 100%;
+    }
+
+    .reviews_page__input {
+      width: 165px !important;
+      flex-shrink: 1;
+    }
+  }
+
+  &__submit {
+    font-size: 20px;
+    line-height: 24px;
+    text-align: center;
+    color: @white;
+    width: 267px;
+    height: 56px;
+    margin: 0;
+    background-color: @orange;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.1s;
+
+    &:hover {
+      color: @white;
+      box-shadow: -5px 5px 20px rgba(255, 130, 25, 0.4);
+    }
+
+    &:active {
+      color: @white;
+      background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), @orange;
+      box-shadow: none;
+    }
+  }
+}
+
+
+@media (max-width: 576px) {
+  .reviews_page {
+  
+    p:not(.info__reviews_item p) {
+      font-size: 14px;
+      line-height: 16px;
+    }
+  
+    h3 {
+      font-size: 16px;
+      line-height: 22px;
+    }
+  
+  
+    .ask-grade.stars input[type="radio"] ~ label::before {
+      width: 18px;
+      height: 18px;
+    }
+  
+    .ask-textarea-big {
+      font-weight: normal;
+      font-size: 16px;
+      line-height: 20px;
+      letter-spacing: 0.01em;
+      color: rgba(6, 6, 6, 0.28);
+      width: 100% !important;
+      max-width: 350px !important;
+      height: 150px !important;
+      padding: 10px 20px;
+      border: 1.5px solid @orange;
+      box-sizing: border-box;
+      border-radius: 20px;
+      resize: none;
+    }
+  
+    &__label {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 22px;
+      letter-spacing: 0.01em;
+      position: relative;
+    }
+  
+    &__input {
+      font-weight: normal;
+      font-size: 20px !important;
+      line-height: 24px;
+      letter-spacing: 0.01em;
+      color: @black;
+      width: 100% !important;
+      max-width: 350px !important;
+      height: auto !important;
+      max-height: 41px;
+      padding: 9px 0 9px 20px;
+      border: 1.5px solid @orange;
+      box-sizing: border-box;
+      border-radius: 20px;
+  
+      &::placeholder {
+        color: rgba(6, 6, 6, 0.28);
+      }
+    }
+  
+    .ask-captcha {
+      max-width: 350px;
+      display: flex;
+      flex-wrap: wrap;
+  
+      .ask-captcha-text {
+        width: 100%;
+      }
+  
+      .reviews_page__input {
+        width: 165px !important;
+        flex-shrink: 1;
+      }
+    }
+  
+    &__submit {
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      color: @white;
+      width: 267px;
+      height: 56px;
+      margin: 0;
+      background-color: @orange;
+      box-sizing: border-box;
+      border: none;
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.1s;
+  
+      &:hover {
+        color: @white;
+        box-shadow: -5px 5px 20px rgba(255, 130, 25, 0.4);
+      }
+  
+      &:active {
+        color: @white;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.02)), @orange;
+        box-shadow: none;
+      }
+    }
+  }
+}
