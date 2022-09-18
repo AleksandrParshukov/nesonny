@@ -1,0 +1,39 @@
+.leaders {
+  display: grid;
+  place-content: center;
+
+  &__item {
+    width: calc(100vw * (596 / 1920));
+    padding: calc(100vw * (15 / 1920)) calc(100vw * (27 / 1920));
+    margin-bottom: calc(100vw * (47 / 1920));
+    background-color: @gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__lname {
+    font-size: calc(100vw * (52 / 1920));
+    line-height: calc(100vw * (61 / 1920));
+  }
+
+  &__fname {
+    font-size: calc(100vw * (40 / 1920));
+    line-height: calc(100vw * (47 / 1920));
+  }
+
+  &__scores {
+    font-size: calc(100vw * (64 / 1920));
+    line-height: calc(100vw * (75 / 1920));
+    font-feature-settings: 'pnum' on, 'lnum' on;
+  }
+}

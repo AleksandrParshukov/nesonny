@@ -58,16 +58,20 @@ const html = () => {
 // Copy
 
 const copy = (done) => {
-  gulp.src([
-    "source/fonts/*.{woff2,woff}",
-    "source/*.ico",
-    "source/img/**/*.{jpg,png,svg,gif}",
-    "source/css/*.css",
-    "source/js/**/*.js",
-  ], {
-    base: "source"
-  })
-    .pipe(gulp.dest("docs"))
+  gulp
+    .src(
+      [
+        'source/fonts/*.{woff2,woff}',
+        'source/*.ico',
+        'source/img/**/*.{jpg,png,svg,gif,webp}',
+        'source/css/*.css',
+        'source/js/**/*.js',
+      ],
+      {
+        base: 'source',
+      }
+    )
+    .pipe(gulp.dest('docs'));
   done();
 }
 
